@@ -1,0 +1,11 @@
+E:\c#\ExecSqlProgram\ExecSqlProgram\bin\Debug\ExecSqlProgram.exe.config
+E:\c#\ExecSqlProgram\ExecSqlProgram\bin\Debug\ExecSqlProgram.exe
+E:\c#\ExecSqlProgram\ExecSqlProgram\bin\Debug\ExecSqlProgram.pdb
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.Form1.resources
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.Properties.Resources.resources
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.GenerateResource.Cache
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.exe
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.pdb
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.AssemblyReference.cache
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.SuggestedBindingRedirects.cache
+E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.CoreCompileInputs.cache

@@ -1,0 +1,6 @@
+﻿IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='opertor_id')    ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add opertor_id varchar(50);
+IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='DoorGroupIDs')  ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add DoorGroupIDs varchar(max);
+IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='fc_cell_id')    ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add fc_cell_id int;
+IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='opendoortime')  ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add opendoortime datetime;
+IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='created_owner_id')  ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add created_owner_id varchar(20);
+IF NOT EXISTS (select name from syscolumns where id=object_id(N'BT_OpenDoor_QRCode') AND NAME='id_card')  ALTER TABLE [dbo].[BT_OpenDoor_QRCode] Add id_card varchar(20);
