@@ -52,6 +52,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnBackUpPath = new System.Windows.Forms.Button();
             this.cbIsBackUp = new System.Windows.Forms.CheckBox();
+            this.cboCondition = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtFile
@@ -164,7 +166,7 @@
             this.columnHeader3});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(9, 255);
+            this.listView1.Location = new System.Drawing.Point(8, 295);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(348, 191);
             this.listView1.TabIndex = 12;
@@ -251,11 +253,31 @@
             this.cbIsBackUp.Text = "是否备份";
             this.cbIsBackUp.UseVisualStyleBackColor = true;
             // 
+            // cboCondition
+            // 
+            this.cboCondition.FormattingEnabled = true;
+            this.cboCondition.Location = new System.Drawing.Point(95, 272);
+            this.cboCondition.Name = "cboCondition";
+            this.cboCondition.Size = new System.Drawing.Size(121, 20);
+            this.cboCondition.TabIndex = 17;
+            this.cboCondition.SelectedIndexChanged += new System.EventHandler(this.cboCondition_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "条件";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 447);
+            this.ClientSize = new System.Drawing.Size(476, 498);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cboCondition);
             this.Controls.Add(this.cbIsBackUp);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBackUpPath);
@@ -310,6 +332,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBackUpPath;
         private System.Windows.Forms.CheckBox cbIsBackUp;
+        private System.Windows.Forms.ComboBox cboCondition;
+        private System.Windows.Forms.Label label8;
     }
 }
 

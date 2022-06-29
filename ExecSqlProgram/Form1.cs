@@ -14,6 +14,8 @@ namespace ExecSqlProgram
     {
       
         IniFile iniFile ;
+
+        ExecSql execsql;
         public Form1()
         {
             InitializeComponent();
@@ -96,7 +98,8 @@ namespace ExecSqlProgram
             }
             listView1.Items.Clear();
 
-            ExecSql execsql = new ExecSql(txtServer.Text, txtUserName.Text, txtPassword.Text, txtDatabase.Text, txtFile.Text, listView1,dtupdateTime.Text,cbIsBackUp.Checked,txtBackUpPath.Text);
+            execsql = new ExecSql(txtServer.Text, txtUserName.Text, txtPassword.Text, txtDatabase.Text, txtFile.Text, listView1,dtupdateTime.Text,cbIsBackUp.Checked,txtBackUpPath.Text);
+            cboCondition.SelectedValue = -1;
             string result = execsql.ExecContent();
             if(result != "")
             {
@@ -131,7 +134,30 @@ namespace ExecSqlProgram
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Value");
+            dt.Columns.Add("Text");
+
+            DataRow dr1 = dt.NewRow();
+            dr1["Text"] = "全部";
+            dr1["Value"] = "-1";
+            dt.Rows.Add(dr1);
+
+            DataRow dr2 = dt.NewRow();
+            dr2["Text"] = "成功";
+            dr2["Value"] = "1";
+            dt.Rows.Add(dr2);
+
+            DataRow dr3 = dt.NewRow();
+            dr3["Text"] = "失败";
+            dr3["Value"] = "0";
+            dt.Rows.Add(dr3);
+
+            cboCondition.DataSource = dt;
+            cboCondition.DisplayMember = "Text";
+            cboCondition.ValueMember = "Value";
+
+            cboCondition.SelectedValue = -1;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -171,6 +197,53 @@ namespace ExecSqlProgram
                 }
                 txtBackUpPath.Text = SelectedPath;
             }
+        }
+
+        private void cboCondition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            #region 筛选
+            listView1.Items.Clear();
+            if (execsql!=null && execsql.listViewItems != null)
+            {
+                if (cboCondition.SelectedValue.ToString() != "-1")
+                {
+
+
+
+                    string selecttxt = "成功";
+                    if (cboCondition.SelectedValue.ToString() == "1")
+                    {
+                        selecttxt = "成功";
+                    }
+                    else
+                    {
+                        selecttxt = "失败";
+                    }
+                    foreach (ListViewItem item in execsql.listViewItems)
+                    {
+
+                        if (item.SubItems[1].Text == selecttxt)
+                        {
+                            listView1.Items.Add(item);
+                        }
+                    }
+
+
+
+                }
+                else
+                {
+                    foreach (ListViewItem item in execsql.listViewItems)
+                    {
+                        listView1.Items.Add(item);
+                    }
+                }
+            }
+           
+
+            #endregion 筛选
+           
+          
         }
     }
 }

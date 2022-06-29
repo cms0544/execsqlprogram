@@ -23,7 +23,7 @@ namespace ExecSqlProgram
 
         public string filePath { set; get; }
 
-        public string updatetime { set; get; } 
+        public string updatetime { set; get; }
 
         public SqlConnection conn;
 
@@ -32,6 +32,8 @@ namespace ExecSqlProgram
         public bool isBackUp { set; get; }
 
         public string backUpPath { set; get; }
+
+        public ArrayList listViewItems {set;get;}
 
         /// <summary>
         /// 执行sql
@@ -83,6 +85,16 @@ namespace ExecSqlProgram
                 {
                     Directory.CreateDirectory(backUpPath);
                 }
+                if(listViewItems == null)
+                {
+                    listViewItems = new ArrayList();
+                }
+                else
+                {
+                    listViewItems.Clear();
+                }
+               
+                
                 string backsql = "BACKUP DATABASE " + this.ServerDatabase + " to DISK ='" + this.backUpPath + @"\" + string.Format("{0}_{1}.bak",ServerDatabase , DateTime.Now.ToString("yyyy_MM_dd HH_mm_ss")) + "'";
                 if (isBackUp)
                 {
@@ -110,7 +122,7 @@ namespace ExecSqlProgram
                             //    continue;
                             //}
 
-                            if(tempstr.ToUpper() !="GO")
+                            if(tempstr.ToUpper().Trim() !="GO")
                             {
                                 str += tempstr + "\n";
                             }
@@ -141,7 +153,7 @@ namespace ExecSqlProgram
                         item.Text = myFiles[i].Name;
                         item.SubItems.Add("成功");
                         this.listview.Items.Add(item);
-                    
+                        listViewItems.Add(item);
                         sr.Close();
                         fs.Close();
                     }
@@ -154,6 +166,7 @@ namespace ExecSqlProgram
                         item.SubItems.Add(ex.Message);
                         item.ForeColor = System.Drawing.Color.Red;
                         this.listview.Items.Add(item);
+                        listViewItems.Add(item);
                     }
                    
                 }

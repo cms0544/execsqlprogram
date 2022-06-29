@@ -9,3 +9,12 @@ E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.pdb
 E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.AssemblyReference.cache
 E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.SuggestedBindingRedirects.cache
 E:\c#\ExecSqlProgram\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.CoreCompileInputs.cache
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\bin\Debug\ExecSqlProgram.exe.config
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\bin\Debug\ExecSqlProgram.exe
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\bin\Debug\ExecSqlProgram.pdb
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.Form1.resources
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.Properties.Resources.resources
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.GenerateResource.cache
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.csproj.CoreCompileInputs.cache
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.exe
+E:\C#Test\execsqlprogram-main\ExecSqlProgram\obj\Debug\ExecSqlProgram.pdb
